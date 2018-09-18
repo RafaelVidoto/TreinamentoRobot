@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180918 11:22:35.345" generator="Robot 3.0.4 (Python 2.7.14 on win32)">
+<suite source="C:\Users\rafael.azevedo\Desktop\Repasse_Robotdesktop\MDELOCADODETESTEBDD.robot" id="s1" name="MDELOCADODETESTEBDD">
+<kw type="setup" name="Inicia o ambiente para teste" library="MODELORESOURSEBDD">
+<kw name="Add Image Path" library="SikuliLibrary">
+<doc>Add image path</doc>
+<arguments>
+<arg>${IMAGEM_DIR}</arg>
+</arguments>
+<msg timestamp="20180918 11:22:38.430" level="INFO">Params: [C:\Users\rafael.azevedo\Desktop\Repasse_Robotdesktop\Resourse/imagem]</msg>
+<status status="PASS" endtime="20180918 11:22:38.430" starttime="20180918 11:22:38.419"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:38.430" starttime="20180918 11:22:38.419"></status>
+</kw>
+<test id="s1-t1" name="Cenário 1: Digitação formulário">
+<kw name="DADO QUE o aplicativo seja executado" library="MODELORESOURSEBDD">
+<kw name="Start Process" library="Process">
+<doc>Starts a new process on background.</doc>
+<arguments>
+<arg>${SISTEMA.ScriptTest}</arg>
+</arguments>
+<msg timestamp="20180918 11:22:38.431" level="INFO">Starting process:
+C:\Users\rafael.azevedo\Desktop\ScriptTest.exe</msg>
+<status status="PASS" endtime="20180918 11:22:38.467" starttime="20180918 11:22:38.431"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:38.467" starttime="20180918 11:22:38.431"></status>
+</kw>
+<kw name="E o usuário acesse a aba Fechamento de TEST" library="MODELORESOURSEBDD">
+<kw name="Click" library="SikuliLibrary">
+<doc>Click image</doc>
+<arguments>
+<arg>abafechamentoTEST</arg>
+</arguments>
+<msg timestamp="20180918 11:22:40.634" level="INFO">Params: [abafechamentoTEST]</msg>
+<msg timestamp="20180918 11:22:40.634" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1537280559781.png'/&gt;
+[log] CLICK on L(288,198)@S(0)[0,0 1920x1080] (546 msec)</msg>
+<status status="PASS" endtime="20180918 11:22:40.634" starttime="20180918 11:22:38.468"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:40.634" starttime="20180918 11:22:38.468"></status>
+</kw>
+<kw name="E o usuário escolha a opção Reprovado" library="MODELORESOURSEBDD">
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>REPROVADO</arg>
+<arg>WindowsForms10.BUTTON.app.0.141b42a_r9_ad17</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:40.681" starttime="20180918 11:22:40.638"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180918 11:22:43.682" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180918 11:22:43.682" starttime="20180918 11:22:40.681"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:43.682" starttime="20180918 11:22:40.638"></status>
+</kw>
+<kw name="E o usuário prencha os dados no formulario" library="MODELORESOURSEBDD">
+<kw name="Click" library="SikuliLibrary">
+<doc>Click image</doc>
+<arguments>
+<arg>combo_sistema</arg>
+</arguments>
+<msg timestamp="20180918 11:22:44.766" level="INFO">Params: [combo_sistema]</msg>
+<msg timestamp="20180918 11:22:44.766" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1537280563966.png'/&gt;
+[log] CLICK on L(381,325)@S(0)[0,0 1920x1080] (534 msec)</msg>
+<status status="PASS" endtime="20180918 11:22:44.767" starttime="20180918 11:22:43.683"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click image</doc>
+<arguments>
+<arg>label_ADMSG5</arg>
+</arguments>
+<msg timestamp="20180918 11:22:47.093" level="INFO">Params: [label_ADMSG5]</msg>
+<msg timestamp="20180918 11:22:47.093" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1537280566000.png'/&gt;
+[log] CLICK on L(282,358)@S(0)[0,0 1920x1080] (533 msec)</msg>
+<status status="PASS" endtime="20180918 11:22:47.093" starttime="20180918 11:22:44.767"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad117</arg>
+<arg>${Lotacao}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.228" starttime="20180918 11:22:47.093"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad115</arg>
+<arg>${Usuario}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.321" starttime="20180918 11:22:47.229"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad114</arg>
+<arg>${Senha}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.406" starttime="20180918 11:22:47.321"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad118</arg>
+<arg>${Versao}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.521" starttime="20180918 11:22:47.406"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad113</arg>
+<arg>${Base}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.655" starttime="20180918 11:22:47.522"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad116</arg>
+<arg>${Observação}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:47.923" starttime="20180918 11:22:47.655"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad112</arg>
+<arg>${CasodeTeste}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:48.098" starttime="20180918 11:22:47.923"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad111</arg>
+<arg>${ResuktadoEsperado}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:48.282" starttime="20180918 11:22:48.098"></status>
+</kw>
+<kw name="Control Send" library="AutoItLibrary">
+<doc>method ControlSend</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>${EMPTY}</arg>
+<arg>WindowsForms10.EDIT.app.0.141b42a_r9_ad110</arg>
+<arg>${Evidências}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:48.437" starttime="20180918 11:22:48.282"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:48.437" starttime="20180918 11:22:43.682"></status>
+</kw>
+<kw name="QUANDO o usuário clicar no botão copiar" library="MODELORESOURSEBDD">
+<kw name="Control Click" library="AutoItLibrary">
+<doc>method ControlClick</doc>
+<arguments>
+<arg>ScriptTest</arg>
+<arg>Copiar</arg>
+<arg>WindowsForms10.BUTTON.app.0.141b42a_r9_ad14</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:48.450" starttime="20180918 11:22:48.438"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:48.450" starttime="20180918 11:22:48.438"></status>
+</kw>
+<kw name="E o bloco de notas for iniciado" library="MODELORESOURSEBDD">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180918 11:22:53.452" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180918 11:22:53.452" starttime="20180918 11:22:48.451"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>^+N</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:53.477" starttime="20180918 11:22:53.452"></status>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<doc>Wait until image shown in screen</doc>
+<arguments>
+<arg>tela_blocodenotas</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20180918 11:22:55.712" level="INFO">Params: [tela_blocodenotas, 10]</msg>
+<msg timestamp="20180918 11:22:55.712" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1537280575643.png'/&gt;</msg>
+<status status="PASS" endtime="20180918 11:22:55.712" starttime="20180918 11:22:53.477"></status>
+</kw>
+<kw name="Send" library="AutoItLibrary">
+<doc>method Send</doc>
+<arguments>
+<arg>^V</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:22:55.750" starttime="20180918 11:22:55.712"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:22:55.750" starttime="20180918 11:22:48.451"></status>
+</kw>
+<kw name="ENTÃO a tela deve conter" library="MODELORESOURSEBDD">
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<doc>Screen should contain image</doc>
+<arguments>
+<arg>validacaoteste1</arg>
+</arguments>
+<msg timestamp="20180918 11:22:56.039" level="INFO">Params: [validacaoteste1]</msg>
+<msg timestamp="20180918 11:22:56.039" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1537280576034.png'/&gt;</msg>
+<status status="PASS" endtime="20180918 11:22:56.039" starttime="20180918 11:22:55.751"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180918 11:23:01.040" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180918 11:23:01.040" starttime="20180918 11:22:56.039"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:23:01.040" starttime="20180918 11:22:55.751"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:23:01.040" critical="yes" starttime="20180918 11:22:38.430"></status>
+</test>
+<kw type="teardown" name="Finaliza o Sistema" library="MODELORESOURSEBDD">
+<kw name="Win Kill" library="AutoItLibrary">
+<doc>method WinKill</doc>
+<arguments>
+<arg>strTitle=Sem título - Bloco de notas</arg>
+<arg>strText=${EMPTY}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:23:01.793" starttime="20180918 11:23:01.042"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180918 11:23:04.793" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180918 11:23:04.793" starttime="20180918 11:23:01.793"></status>
+</kw>
+<kw name="Win Kill" library="AutoItLibrary">
+<doc>method WinKill</doc>
+<arguments>
+<arg>strTitle=ScriptTest</arg>
+<arg>strText=${EMPTY}</arg>
+</arguments>
+<status status="PASS" endtime="20180918 11:23:05.129" starttime="20180918 11:23:04.793"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:23:05.129" starttime="20180918 11:23:01.042"></status>
+</kw>
+<status status="PASS" endtime="20180918 11:23:05.129" starttime="20180918 11:22:35.348"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="MDELOCADODETESTEBDD" pass="1">MDELOCADODETESTEBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
